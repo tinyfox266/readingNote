@@ -1,0 +1,5 @@
+[[Complete,Safe Information Flow with Decentralized Labels]]
+* [[sp98.pdf|local copy]]
+
+[[Certification of Programs for Secure Information Flow]]
+* [[dd77.pdf|local copy]]
