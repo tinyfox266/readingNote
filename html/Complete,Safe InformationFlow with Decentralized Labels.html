@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>Complete,Safe InformationFlow with Decentralized Labels</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+
+<h2 id="toc_0.1">About the Model</h2>
+<p>
+Owners are principals: identifiers representing users and other authority
+entities such as groups or roles.
+</p>
+
+<p>
+Owners(L) are the principals whose data was observed in order to obtain that
+value. For each owner <em>O</em>, the label contains a set of readers,
+<em>readers(L,O)</em>; these are the principals that <em>O</em> allows to observe the value.
+</p>
+
+<p>
+Observations happen when values are written to <em>output channels</em>. Each output
+channel <em>C</em> has an associated set of readers; these are the principals who will
+be able to observe information written to that channel. A value can be
+written to a channel only if each reader of the channel has the authority to act
+for some reader in the _effective readers set _ of the value's label.
+</p>
+
+<p>
+Values may also be relabeled by <em>declassification</em>, which reduces
+restrictiveness by removing an owner or adding a reader for an owner.
+Declassification can be performed only by a process with the authority to act
+for the owner whose policy is being changes;
+</p>
+
+</body>
+</html>

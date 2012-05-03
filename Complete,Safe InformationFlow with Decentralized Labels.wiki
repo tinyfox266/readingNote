@@ -1,0 +1,20 @@
+== About the Model ==
+Owners are principals: identifiers representing users and other authority
+entities such as groups or roles.
+
+Owners(L) are the principals whose data was observed in order to obtain that
+value. For each owner _O_, the label contains a set of readers,
+_readers(L,O)_; these are the principals that _O_ allows to observe the value.
+
+Observations happen when values are written to _output channels_. Each output
+channel _C_ has an associated set of readers; these are the principals who will
+be able to observe information written to that channel. A value can be
+written to a channel only if each reader of the channel has the authority to act
+for some reader in the _effective readers set _ of the value's label.
+
+Values may also be relabeled by _declassification_, which reduces
+restrictiveness by removing an owner or adding a reader for an owner.
+Declassification can be performed only by a process with the authority to act
+for the owner whose policy is being changes;
+
+
