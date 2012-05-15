@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>Android</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+
+<h2 id="toc_0.1">connect as client</h2>
+<p>
+<a href="http://mcuos.com/thread-6625-1-1.html">from here</a>
+</p>
+
+<ul>
+<li>
+First Method
+
+</ul>
+<blockquote>
+import java.util.UUID
+</blockquote>
+<blockquote>
+UUID uuid = UUID.fromString(SPP_UUID);
+</blockquote>
+<blockquote>
+btSocket = btDev.createRfcommSocketToServiceRecord(uuid);  
+</blockquote>
+
+<ul>
+<li>
+Snd Method  
+
+</ul>
+<blockquote>
+import java.lang.reflect.Method;
+</blockquote>
+<blockquote>
+Method = null;
+</blockquote>
+<blockquote>
+try{
+</blockquote>
+<blockquote>
+m = btDev.getClass().getMethod("createRfcommSocket",new Class[]
+</blockquote>
+<blockquote>
+{int.class});} catch (<a href="SecurityException.html">SecurityException</a> e){
+</blockquote>
+<blockquote>
+e.printStackTrace();
+</blockquote>
+<blockquote>
+} catch (<a href="NoSuchMethodException.html">NoSuchMethodException</a> e){
+</blockquote>
+<blockquote>
+e.printStackTrace(); 
+</blockquote>
+<blockquote>
+}
+</blockquote>
+<blockquote>
+btSocket = (<a href="BluetoothSocket.html">BluetoothSocket</a>) m.invoke(btDev,1);
+</blockquote>
+
+</body>
+</html>
